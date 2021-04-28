@@ -10,13 +10,12 @@ function App() {
     const response = await axios.get(url);
     if (response.data) {
       setProducts(response.data);
-      console.log(products)
     }
   }
 
   useEffect(() => {
     getProducts();
-  }, []);
+  },[]);
 
   return (
     <div className="App">
